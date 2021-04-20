@@ -6,8 +6,6 @@ import ScheduleItem from './components/scheduleItem/ScheduleItem'
 import Sidebar from './components/sidebar/Sidebar'
 import Slider from './components/slider/Slider'
 import AnimeCard from './components/animeCard/AnimeCard'
-// import AnimeItemRow from './components/animeItemRow/AnimeItemRow'
-// import AnimeItemGrid from './components/animeItemGrid/AnimeItemGrid'
 import AnimeList from './components/animeList/AnimeList'
 import Footer from './components/footer/Footer'
 
