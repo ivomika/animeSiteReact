@@ -1,0 +1,13 @@
+@import '../scss/connector';
+
+.schedule {
+	display: block;
+	width: 40em;
+	background-color: #333;
+
+	.schedule__title {
+		@include titleSansation(2.4em);
+		color: #edf6f9;
+		padding: 0.5em 1em 1.5em 1em;
+	}
+}

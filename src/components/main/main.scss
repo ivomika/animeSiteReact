@@ -1,0 +1,33 @@
+@import '../scss/connector';
+
+.container {
+	width: 100%;
+	max-width: 115em;
+	margin: 0 auto;
+
+	// @media screen and (max-width: $brake1) {
+	// 	max-width: 900px;
+	// }
+}
+
+.body {
+	font-size: 10px;
+	overflow-x: hidden;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+
+	@media screen and (max-width: $brake1) {
+		font-size: 8px;
+	}
+
+	@media screen and (max-width: 1200px) {
+		font-size: 6px;
+	}
+}
+
+.main {
+	width: auto;
+	margin-left: 31em;
+	background-color: #83c5be;
+}

@@ -1,0 +1,27 @@
+@import '../scss/connector';
+
+.footer {
+	background-color: #333;
+	margin-top: auto;
+	// margin-left: 31em;
+	position: relative;
+	&::after {
+		content: '';
+		height: 1em;
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		background-color: #e29578;
+	}
+
+	.footer__inner {
+		padding: 4em 0 5em 0;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.footer__logo {
+		height: 6em;
+	}
+}

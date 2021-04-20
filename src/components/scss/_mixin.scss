@@ -1,0 +1,29 @@
+@mixin boldRoboto($size) {
+	font-family: 'Roboto', sans-serif;
+	font-size: $size;
+	font-weight: 700;
+	line-height: 1.4;
+}
+
+@mixin regularRoboto($size) {
+	font-family: 'Roboto', sans-serif;
+	font-size: $size;
+	font-weight: 400;
+	line-height: 1.4;
+}
+
+@mixin titleRoboto($size) {
+	font-family: 'Roboto', sans-serif;
+	font-size: $size;
+	font-weight: 400;
+	line-height: 1.4;
+	text-shadow: 0.1em 0.1em 0 #006d77;
+}
+
+@mixin titleSansation($size) {
+	font-family: 'Sansation', sans-serif;
+	font-size: $size;
+	font-weight: 700;
+	line-height: 1.4;
+	letter-spacing: 0.15em;
+}

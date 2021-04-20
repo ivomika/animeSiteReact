@@ -1,0 +1,42 @@
+@import '../scss/connector';
+
+.slider {
+	margin-top: 2em;
+	padding-bottom: 2em;
+	display: flex;
+	overflow-x: auto;
+
+	background-color: #7abeb7;
+	-webkit-background-clip: text;
+	background-clip: text;
+	transition: background-color 0.2s linear;
+
+	&:hover {
+		background-color: #333;
+	}
+
+	&::-webkit-scrollbar {
+		width: 8px;
+		height: 8px;
+	}
+
+	&::-webkit-scrollbar-track {
+		background-color: #83c5be;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: inherit;
+	}
+
+	.anime-card:first-of-type {
+		margin-left: calc((100% - 115em) / 2);
+
+		// @media screen and (max-width: $brake1) {
+		// 	margin-left: calc((100% - 900px) / 2);
+		// }
+	}
+
+	.anime-card {
+		margin-right: 5em;
+	}
+}

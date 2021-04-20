@@ -1,0 +1,80 @@
+@import '../scss/connector';
+
+.sidebar__item {
+	margin-bottom: 1em;
+	@include regularRoboto(1.8em);
+	color: #edf6f9;
+
+	.sidebar__btn {
+		width: 103%;
+		background-color: #e29578;
+		z-index: 1000;
+		position: relative;
+
+		padding: 0.5em 2em;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.sidebar__plus {
+		width: 1.5em;
+		height: 1.5em;
+		position: relative;
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			width: 0.25em;
+			border-radius: 0.2em;
+			height: 100%;
+			background-color: #edf6f9;
+		}
+
+		&::after {
+			transform: rotateZ(90deg);
+		}
+	}
+
+	.sidebar__smenu {
+		background: #333;
+		overflow-x: hidden;
+		overflow-y: auto;
+		max-height: 0;
+		transition: 0.2s ease-in-out max-height;
+
+		&::-webkit-scrollbar {
+			width: 8px;
+		}
+
+		&::-webkit-scrollbar-track {
+			background-color: #333;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background-color: #edf6f9;
+			margin: 1px;
+		}
+	}
+
+	.sidebar__btn.active + .sidebar__smenu {
+		max-height: 10em;
+	}
+
+	.sidebar__smenu-link {
+		display: block;
+		padding: 0.2em 3em;
+		margin: 0.4em 0;
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			width: 6px;
+			height: 100%;
+			background-color: #e29578;
+			top: 0;
+			left: 0.2em;
+		}
+	}
+}

@@ -1,0 +1,140 @@
+.check-box {
+	display: flex;
+
+	.check-box__row,
+	.check-box__square {
+		// background-color: #edf6f9;
+		width: 3em;
+		height: 3em;
+	}
+
+	.check-box__square {
+		position: relative;
+
+		.check-box__square-first,
+		.check-box__square-second {
+			&::before,
+			&::after {
+				transition: 0.2s linear background-color;
+				transition-delay: 0.2s;
+				content: '';
+				position: absolute;
+				width: 45%;
+				height: 45%;
+				border-radius: 0.4em;
+				background-color: #7abeb7;
+			}
+		}
+
+		.check-box__square-first {
+			&::before {
+				top: 0;
+				left: 0;
+			}
+
+			&::after {
+				top: 0;
+				right: 0;
+			}
+		}
+
+		.check-box__square-second {
+			&::before {
+				bottom: 0;
+				left: 0;
+			}
+
+			&::after {
+				bottom: 0;
+				right: 0;
+			}
+		}
+	}
+
+	.check-box__row {
+		position: relative;
+		width: 3.5em;
+		.sheck-box__row-span {
+			display: block;
+			position: relative;
+			width: 100%;
+			height: 0.6em;
+			border-radius: 0.6em;
+			background-color: #edf6f9;
+			top: 50%;
+			transform: translateY(-50%);
+			transition: 0.2s linear background-color;
+			transition-delay: 0.2s;
+
+			&::before,
+			&::after {
+				content: '';
+				position: absolute;
+				display: block;
+				width: 100%;
+				height: 0.6em;
+				border-radius: 0.6em;
+				background-color: #edf6f9;
+				transition: 0.2s linear background-color;
+				transition-delay: 0.2s;
+			}
+
+			&::before {
+				top: -1em;
+			}
+
+			&::after {
+				top: 1em;
+			}
+		}
+	}
+
+	.check-box__label {
+		width: 6em;
+		height: 3em;
+		background-color: #404040;
+		border-radius: 2em;
+		margin: 0 2em;
+		position: relative;
+		padding: 0.2em;
+
+		&::after {
+			content: '';
+			position: absolute;
+			background-color: #e29578;
+			top: 0.3em;
+			left: 0.3em;
+			border-radius: 50%;
+			height: 2.4em;
+			width: 2.4em;
+			transition: 0.2s ease-in-out transform;
+		}
+	}
+
+	.check-box__input:checked ~ .check-box__label {
+		&::after {
+			transform: translateX(125%);
+		}
+	}
+
+	.check-box__input:checked ~ .check-box__square {
+		.check-box__square-first::before,
+		.check-box__square-first::after,
+		.check-box__square-second::before,
+		.check-box__square-second::after {
+			background-color: #edf6f9;
+		}
+	}
+
+	.check-box__input:checked ~ .check-box__row {
+		.sheck-box__row-span,
+		.sheck-box__row-span::before,
+		.sheck-box__row-span::after {
+			background-color: #7abeb7;
+		}
+	}
+
+	.check-box__input {
+		display: none;
+	}
+}

@@ -1,0 +1,71 @@
+@import '../scss/connector';
+
+.anime-item-row {
+	display: flex;
+	justify-content: space-between;
+	color: #edf6f9;
+	margin-bottom: 6em;
+
+	.anime-item-row__image-container {
+		width: 20em;
+		height: 20em;
+
+		display: flex;
+		justify-content: center;
+		overflow: hidden;
+	}
+
+	.anime-item-row__discription {
+		@include regularRoboto(1.8em);
+		width: 45em;
+		max-height: 5.6em;
+		overflow: hidden;
+	}
+
+	.anime-item-row__info {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		position: relative;
+		padding-left: 3em;
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 10px;
+			height: 100%;
+			background-color: #e29578;
+		}
+	}
+
+	.anime-item-row__title {
+		@include titleRoboto(2.4em);
+		position: relative;
+		padding-bottom: 0.3em;
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 2.5em;
+			height: 0.18em;
+			background-color: #e29578;
+		}
+	}
+
+	.anime-item-row__score {
+		font-size: 2.4em;
+		margin-top: 0.2em;
+	}
+
+	.anime-item-row__image {
+		object-fit: cover;
+		width: 100%;
+	}
+
+	.score {
+		margin-right: 0.3em;
+	}
+}

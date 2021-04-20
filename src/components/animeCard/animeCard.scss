@@ -1,0 +1,49 @@
+@import '../scss/connector';
+
+.anime-card {
+	width: 175px;
+
+	.anime-card__image-container {
+		overflow: hidden;
+		height: 240px;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		border-radius: 1em;
+	}
+
+	.anime-card__image {
+		object-fit: cover;
+		height: 120%;
+	}
+
+	.anime-card__title {
+		@include titleRoboto(2.4em);
+		color: #edf6f9;
+		position: relative;
+		margin-top: 0.6em;
+		z-index: 1;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 2.5em;
+			height: 0.18em;
+			background-color: #e29578;
+		}
+	}
+
+	.anime-card__score {
+		margin-top: 0.4em;
+		font-size: 1.5em;
+	}
+
+	.score {
+		margin-right: 0.2em;
+	}
+}
