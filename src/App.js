@@ -70,7 +70,7 @@ const animes = {
 			id: 6,
 			link: '/#',
 			title: 'Re:Zero',
-			image: 'https://source.unsplash.com/collection/1118891',
+			image: 'https://source.unsplash.com/collection/1111891',
 			score: 2,
 		},
 	],
